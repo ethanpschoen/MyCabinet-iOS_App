@@ -14,6 +14,7 @@
 		AA85058A2C6EC276002FB9F0 /* MyCabinetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8505892C6EC276002FB9F0 /* MyCabinetTests.swift */; };
 		AA8505942C6EC276002FB9F0 /* MyCabinetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8505932C6EC276002FB9F0 /* MyCabinetUITests.swift */; };
 		AA8505962C6EC276002FB9F0 /* MyCabinetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8505952C6EC276002FB9F0 /* MyCabinetUITestsLaunchTests.swift */; };
+		AA8505A52C6EC571002FB9F0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8505A42C6EC571002FB9F0 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		AA85058F2C6EC276002FB9F0 /* MyCabinetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCabinetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8505932C6EC276002FB9F0 /* MyCabinetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCabinetUITests.swift; sourceTree = "<group>"; };
 		AA8505952C6EC276002FB9F0 /* MyCabinetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCabinetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AA8505A42C6EC571002FB9F0 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		AA8505772C6EC275002FB9F0 /* MyCabinet */ = {
 			isa = PBXGroup;
 			children = (
+				AA8505A22C6EC553002FB9F0 /* Source */,
 				AA8505782C6EC275002FB9F0 /* MyCabinetApp.swift */,
 				AA85057A2C6EC275002FB9F0 /* ContentView.swift */,
 				AA85057C2C6EC276002FB9F0 /* Assets.xcassets */,
@@ -125,6 +128,22 @@
 				AA8505952C6EC276002FB9F0 /* MyCabinetUITestsLaunchTests.swift */,
 			);
 			path = MyCabinetUITests;
+			sourceTree = "<group>";
+		};
+		AA8505A22C6EC553002FB9F0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AA8505A32C6EC55E002FB9F0 /* Models */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		AA8505A32C6EC55E002FB9F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA8505A42C6EC571002FB9F0 /* File.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA85057B2C6EC275002FB9F0 /* ContentView.swift in Sources */,
+				AA8505A52C6EC571002FB9F0 /* File.swift in Sources */,
 				AA8505792C6EC275002FB9F0 /* MyCabinetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
