@@ -1,18 +1,26 @@
-//
-//  ItemRowView.swift
-//  MyCabinet
-//
-//  Created by Ethan on 8/15/24.
-//
-
 import SwiftUI
 
 struct ItemRowView: View {
+    let item: Item
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text(item.name)
+                .font(.headline)
+            
+            Spacer()
+            
+            Text(item.isExpired ? "Expired" : "\(item.daysUntilExpiration ?? 0) days left")
+                .foregroundColor(item.isExpired ? .red : .green)
+                .font(.subheadline)
+        }
+        .padding()
     }
 }
 
-#Preview {
-    ItemRowView()
+struct ItemRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        ItemRowView(item: Item(name: "Milk", expirationDate: Date().addingTimeInterval(-86400)))
+            .previewLayout(.sizeThatFits)
+    }
 }

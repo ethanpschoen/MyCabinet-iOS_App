@@ -1,18 +1,26 @@
-//
-//  SectionView.swift
-//  MyCabinet
-//
-//  Created by Ethan on 8/15/24.
-//
-
 import SwiftUI
 
 struct SectionView: View {
+    @State var section: Section
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(section.items) { item in
+                ItemRowView(item: item)
+            }
+        }
+        .navigationTitle(section.title)
     }
 }
 
-#Preview {
-    SectionView()
+struct SectionView_Previews: PreviewProvider {
+    static var previews: some View {
+        let items = [
+            Item(name: "Milk", expirationDate: Date().addingTimeInterval(-86400)),
+            Item(name: "Cheese", expirationDate: Date().addingTimeInterval(86400 * 5))
+        ]
+        let section = Section(title: "Dairy", items: items)
+        
+        SectionView(section: section)
+    }
 }
