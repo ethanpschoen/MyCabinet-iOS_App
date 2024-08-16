@@ -14,6 +14,7 @@
 		AA81F5E12C6FE961003CFB4A /* ItemRowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA81F5E02C6FE961003CFB4A /* ItemRowViewController.swift */; };
 		AA81F5E32C6FE984003CFB4A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA81F5E22C6FE984003CFB4A /* NotificationService.swift */; };
 		AA81F5E52C6FEACF003CFB4A /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA81F5E42C6FEACF003CFB4A /* ItemDetailViewController.swift */; };
+		AA81F5E72C6FEEBA003CFB4A /* ExpirationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA81F5E62C6FEEBA003CFB4A /* ExpirationService.swift */; };
 		AA8505792C6EC275002FB9F0 /* MyCabinetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8505782C6EC275002FB9F0 /* MyCabinetApp.swift */; };
 		AA85057B2C6EC275002FB9F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA85057A2C6EC275002FB9F0 /* ContentView.swift */; };
 		AA85057D2C6EC276002FB9F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA85057C2C6EC276002FB9F0 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		AA81F5E02C6FE961003CFB4A /* ItemRowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewController.swift; sourceTree = "<group>"; };
 		AA81F5E22C6FE984003CFB4A /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		AA81F5E42C6FEACF003CFB4A /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		AA81F5E62C6FEEBA003CFB4A /* ExpirationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirationService.swift; sourceTree = "<group>"; };
 		AA8505752C6EC275002FB9F0 /* MyCabinet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCabinet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8505782C6EC275002FB9F0 /* MyCabinetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCabinetApp.swift; sourceTree = "<group>"; };
 		AA85057A2C6EC275002FB9F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				AA81F5E22C6FE984003CFB4A /* NotificationService.swift */,
+				AA81F5E62C6FEEBA003CFB4A /* ExpirationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				AA81F5E12C6FE961003CFB4A /* ItemRowViewController.swift in Sources */,
 				AA8505A52C6EC571002FB9F0 /* File.swift in Sources */,
 				AA5C74042C6EC7F10014534C /* SectionListView.swift in Sources */,
+				AA81F5E72C6FEEBA003CFB4A /* ExpirationService.swift in Sources */,
 				AA8505792C6EC275002FB9F0 /* MyCabinetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
