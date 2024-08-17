@@ -29,6 +29,9 @@
 		AA8505942C6EC276002FB9F0 /* MyCabinetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8505932C6EC276002FB9F0 /* MyCabinetUITests.swift */; };
 		AA8505962C6EC276002FB9F0 /* MyCabinetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8505952C6EC276002FB9F0 /* MyCabinetUITestsLaunchTests.swift */; };
 		AA8505A52C6EC571002FB9F0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8505A42C6EC571002FB9F0 /* Item.swift */; };
+		AA9B4E032C71421E000B772D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9B4E022C71421E000B772D /* HomeViewController.swift */; };
+		AA9B4E052C714407000B772D /* SectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9B4E042C714407000B772D /* SectionDetailViewController.swift */; };
+		AA9B4E072C715398000B772D /* ItemFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9B4E062C715398000B772D /* ItemFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		AA8505932C6EC276002FB9F0 /* MyCabinetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCabinetUITests.swift; sourceTree = "<group>"; };
 		AA8505952C6EC276002FB9F0 /* MyCabinetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCabinetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AA8505A42C6EC571002FB9F0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		AA9B4E022C71421E000B772D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AA9B4E042C714407000B772D /* SectionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailViewController.swift; sourceTree = "<group>"; };
+		AA9B4E062C715398000B772D /* ItemFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,9 @@
 			children = (
 				AA81F5E02C6FE961003CFB4A /* ItemRowViewController.swift */,
 				AA81F5E42C6FEACF003CFB4A /* ItemDetailViewController.swift */,
+				AA9B4E022C71421E000B772D /* HomeViewController.swift */,
+				AA9B4E042C714407000B772D /* SectionDetailViewController.swift */,
+				AA9B4E062C715398000B772D /* ItemFormViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -357,12 +366,15 @@
 				AA85057B2C6EC275002FB9F0 /* ContentView.swift in Sources */,
 				AA5C73F92C6EC7550014534C /* Section.swift in Sources */,
 				AA5C74062C6EC80C0014534C /* SectionView.swift in Sources */,
+				AA9B4E072C715398000B772D /* ItemFormViewController.swift in Sources */,
 				AA81F5E32C6FE984003CFB4A /* NotificationService.swift in Sources */,
+				AA9B4E052C714407000B772D /* SectionDetailViewController.swift in Sources */,
 				AA81F5E12C6FE961003CFB4A /* ItemRowViewController.swift in Sources */,
 				AA8505A52C6EC571002FB9F0 /* Item.swift in Sources */,
 				AA5C74042C6EC7F10014534C /* SectionListView.swift in Sources */,
 				AA81F5E72C6FEEBA003CFB4A /* ExpirationService.swift in Sources */,
 				AA8505792C6EC275002FB9F0 /* MyCabinetApp.swift in Sources */,
+				AA9B4E032C71421E000B772D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
