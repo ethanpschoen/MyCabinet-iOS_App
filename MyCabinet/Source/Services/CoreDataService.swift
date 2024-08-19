@@ -17,8 +17,12 @@ class CoreDataService {
         return container
     }()
     
+    var context: NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
+    
+    // MARK: - Core Data Saving support
     func saveContext() {
-        let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
                 try context.save()
@@ -29,9 +33,47 @@ class CoreDataService {
         }
     }
     
+    // MARK: - CRUD Operations
+    
+    // Create
+    func createSection(title: String, items: [Item], iconName: String) -> Section {
+        let section = Section(context: context)
+        section.title = title
+        section.items = NSSet(array: items)
+        section.iconName = iconName
+        saveContext()
+        return section
+    }
+    
+    // Read
     func fetchSections() -> [Section] {
-        // Implement Core Data fetch logic
-        return []
+        let fetchRequest: NSFetchRequest<Section> = Section.fetchRequest()
+        do {
+            return try context.fetch(fetchRequest)
+        } catch {
+            print("Failed to fetch sections: \(error)")
+            return []
+        }
+    }
+    
+    // Update
+    func updateSection(section: Section, newTitle: String?, newItems: [Item]?, newIconName: String?) {
+        if let newTitle = newTitle {
+            section.title = newTitle
+        }
+        if let newItems = newItems {
+            section.items = NSSet(array: newItems)
+        }
+        if let newIconName = newIconName {
+            section.iconName = newIconName
+        }
+        saveContext()
+    }
+    
+    // Delete
+    func deleteSection(section: Section) {
+        context.delete(section)
+        saveContext()
     }
     
     func fetchItems(for section: Section) -> [Item] {

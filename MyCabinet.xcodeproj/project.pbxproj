@@ -10,6 +10,8 @@
 		AA3E49132C73F5DB00FDA82E /* SectionIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E49122C73F5DB00FDA82E /* SectionIconView.swift */; };
 		AA3E49152C73FB1800FDA82E /* SectionIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E49142C73FB1800FDA82E /* SectionIconViewController.swift */; };
 		AA3E49182C73FC6800FDA82E /* SectionIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E49172C73FC6800FDA82E /* SectionIconCell.swift */; };
+		AA3E491B2C7403FA00FDA82E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3E491A2C7403FA00FDA82E /* CoreData.framework */; };
+		AA3E491E2C74043000FDA82E /* MyCabinet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA3E491C2C74043000FDA82E /* MyCabinet.xcdatamodeld */; };
 		AA4D456B2C715C3100EC700A /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D456A2C715C3100EC700A /* CoreDataService.swift */; };
 		AA4D456D2C715D3F00EC700A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D456C2C715D3F00EC700A /* SettingsViewController.swift */; };
 		AA4D456E2C715E0800EC700A /* ItemDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA81F5F22C6FFB2D003CFB4A /* ItemDetailViewControllerTests.swift */; };
@@ -60,6 +62,8 @@
 		AA3E49122C73F5DB00FDA82E /* SectionIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionIconView.swift; sourceTree = "<group>"; };
 		AA3E49142C73FB1800FDA82E /* SectionIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionIconViewController.swift; sourceTree = "<group>"; };
 		AA3E49172C73FC6800FDA82E /* SectionIconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionIconCell.swift; sourceTree = "<group>"; };
+		AA3E491A2C7403FA00FDA82E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AA3E491D2C74043000FDA82E /* MyCabinet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCabinet.xcdatamodel; sourceTree = "<group>"; };
 		AA4D456A2C715C3100EC700A /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		AA4D456C2C715D3F00EC700A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AA5C73F82C6EC7550014534C /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3E491B2C7403FA00FDA82E /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +128,14 @@
 				AA3E49172C73FC6800FDA82E /* SectionIconCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		AA3E49192C7403FA00FDA82E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA3E491A2C7403FA00FDA82E /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AA5C73FA2C6EC7740014534C /* Services */ = {
@@ -175,6 +188,7 @@
 				AA8505882C6EC276002FB9F0 /* MyCabinetTests */,
 				AA8505922C6EC276002FB9F0 /* MyCabinetUITests */,
 				AA8505762C6EC275002FB9F0 /* Products */,
+				AA3E49192C7403FA00FDA82E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +213,7 @@
 				AA85057E2C6EC276002FB9F0 /* Preview Content */,
 				AA81F5E82C6FF1C6003CFB4A /* LaunchScreen.storyboard */,
 				AA81F5EA2C6FF4DC003CFB4A /* Info.plist */,
+				AA3E491C2C74043000FDA82E /* MyCabinet.xcdatamodeld */,
 			);
 			path = MyCabinet;
 			sourceTree = "<group>";
@@ -402,6 +417,7 @@
 				AA5C74042C6EC7F10014534C /* SectionListView.swift in Sources */,
 				AA81F5E72C6FEEBA003CFB4A /* ExpirationService.swift in Sources */,
 				AA8505792C6EC275002FB9F0 /* MyCabinetApp.swift in Sources */,
+				AA3E491E2C74043000FDA82E /* MyCabinet.xcdatamodeld in Sources */,
 				AA9B4E032C71421E000B772D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -738,6 +754,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AA3E491C2C74043000FDA82E /* MyCabinet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AA3E491D2C74043000FDA82E /* MyCabinet.xcdatamodel */,
+			);
+			currentVersion = AA3E491D2C74043000FDA82E /* MyCabinet.xcdatamodel */;
+			name = MyCabinet.xcdatamodeld;
+			path = /Users/ethan/Documents/GitHub/MyCabinet/MyCabinet/MyCabinet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AA85056D2C6EC275002FB9F0 /* Project object */;
 }
