@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA3E49132C73F5DB00FDA82E /* SectionIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E49122C73F5DB00FDA82E /* SectionIconView.swift */; };
+		AA3E49152C73FB1800FDA82E /* SectionIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E49142C73FB1800FDA82E /* SectionIconViewController.swift */; };
+		AA3E49182C73FC6800FDA82E /* SectionIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E49172C73FC6800FDA82E /* SectionIconCell.swift */; };
 		AA4D456B2C715C3100EC700A /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D456A2C715C3100EC700A /* CoreDataService.swift */; };
 		AA4D456D2C715D3F00EC700A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D456C2C715D3F00EC700A /* SettingsViewController.swift */; };
 		AA4D456E2C715E0800EC700A /* ItemDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA81F5F22C6FFB2D003CFB4A /* ItemDetailViewControllerTests.swift */; };
@@ -54,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA3E49122C73F5DB00FDA82E /* SectionIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionIconView.swift; sourceTree = "<group>"; };
+		AA3E49142C73FB1800FDA82E /* SectionIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionIconViewController.swift; sourceTree = "<group>"; };
+		AA3E49172C73FC6800FDA82E /* SectionIconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionIconCell.swift; sourceTree = "<group>"; };
 		AA4D456A2C715C3100EC700A /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		AA4D456C2C715D3F00EC700A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AA5C73F82C6EC7550014534C /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
@@ -111,6 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA3E49162C73FC5B00FDA82E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AA3E49172C73FC6800FDA82E /* SectionIconCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		AA5C73FA2C6EC7740014534C /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +144,7 @@
 				AA9B4E042C714407000B772D /* SectionDetailViewController.swift */,
 				AA9B4E062C715398000B772D /* ItemFormViewController.swift */,
 				AA4D456C2C715D3F00EC700A /* SettingsViewController.swift */,
+				AA3E49142C73FB1800FDA82E /* SectionIconViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -137,9 +152,11 @@
 		AA5C74002C6EC7B70014534C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AA3E49162C73FC5B00FDA82E /* Cells */,
 				AA5C74012C6EC7CB0014534C /* ItemRowView.swift */,
 				AA5C74032C6EC7F10014534C /* SectionListView.swift */,
 				AA5C74052C6EC80C0014534C /* SectionView.swift */,
+				AA3E49122C73F5DB00FDA82E /* SectionIconView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,14 +384,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3E49182C73FC6800FDA82E /* SectionIconCell.swift in Sources */,
 				AA81F5E52C6FEACF003CFB4A /* ItemDetailViewController.swift in Sources */,
 				AA5C74022C6EC7CB0014534C /* ItemRowView.swift in Sources */,
 				AA85057B2C6EC275002FB9F0 /* ContentView.swift in Sources */,
 				AA5C73F92C6EC7550014534C /* Section.swift in Sources */,
 				AA5C74062C6EC80C0014534C /* SectionView.swift in Sources */,
+				AA3E49132C73F5DB00FDA82E /* SectionIconView.swift in Sources */,
 				AA9B4E072C715398000B772D /* ItemFormViewController.swift in Sources */,
 				AA81F5E32C6FE984003CFB4A /* NotificationService.swift in Sources */,
 				AA4D456D2C715D3F00EC700A /* SettingsViewController.swift in Sources */,
+				AA3E49152C73FB1800FDA82E /* SectionIconViewController.swift in Sources */,
 				AA4D456B2C715C3100EC700A /* CoreDataService.swift in Sources */,
 				AA9B4E052C714407000B772D /* SectionDetailViewController.swift in Sources */,
 				AA81F5E12C6FE961003CFB4A /* ItemRowViewController.swift in Sources */,

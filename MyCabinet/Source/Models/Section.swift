@@ -12,6 +12,9 @@ class Section: Identifiable, Codable {
     // Array of items in this section
     var items: [Item]
     
+    // Name of icon for section
+    var iconName: String
+    
     // Computed property to get the count of items in the section
     var itemCount: Int {
         return items.count
@@ -23,10 +26,11 @@ class Section: Identifiable, Codable {
     }
     
     // Initializer
-    init(title: String, items: [Item] = []) {
+    init(title: String, items: [Item] = [], iconName: String) {
         self.id = UUID()
         self.title = title
         self.items = items
+        self.iconName = iconName
     }
     
     // Method to add a new item to the section

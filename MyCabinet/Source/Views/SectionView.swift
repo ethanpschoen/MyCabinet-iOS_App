@@ -19,7 +19,7 @@ struct SectionView_Previews: PreviewProvider {
             Item(name: "Milk", expirationDate: Date().addingTimeInterval(-86400)),
             Item(name: "Cheese", expirationDate: Date().addingTimeInterval(86400 * 5))
         ]
-        let section = Section(title: "Dairy", items: items)
+        let section = Section(title: "Dairy", items: items, iconName: "Dairy")
         
         SectionView(section: section)
     }
