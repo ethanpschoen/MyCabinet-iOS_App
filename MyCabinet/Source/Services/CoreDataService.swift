@@ -1,7 +1,7 @@
 import CoreData
 import UIKit
 
-class CoreDataService {
+class CoreDataService: ObservableObject {
     
     static let shared = CoreDataService()
     
