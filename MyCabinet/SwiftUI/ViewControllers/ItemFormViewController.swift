@@ -12,9 +12,7 @@ class ItemFormViewController: UIViewController {
         
         if let item = item {
             nameTextField.text = item.name
-            if let expirationDate = item.expirationDate {
-                expirationDatePicker.date = expirationDate
-            }
+            expirationDatePicker.date = item.expirationDate
         }
     }
     

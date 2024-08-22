@@ -18,8 +18,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Placeholder function for loading sections
         // Replace with actual data loading logic
         return [
-            Section(title: "Dairy"),
-            Section(title: "Product")
+            Section(title: "Dairy", iconName: "Dairy"),
+            Section(title: "Product", iconName: "Product")
         ]
     }
     

@@ -29,7 +29,7 @@ class ItemDetailViewControllerTests: XCTestCase {
     func testSaveButtonSavesItem() {
         // Simulate user editing and saving the item
         viewController.nameTextField.text = "Eggs"
-        viewController.saveButtonTapepd(UIButton())
+        viewController.saveButtonTapped(UIButton())
         
         // Assert the item was updated
         XCTAssertEqual(viewController.item?.name, "Eggs")

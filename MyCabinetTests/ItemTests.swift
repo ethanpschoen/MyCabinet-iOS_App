@@ -9,12 +9,6 @@ class ItemTests: XCTestCase {
         XCTAssertNotNil(item)
         XCTAssertEqual(item.name, "Milk")
         XCTAssertNotNil(item.expirationDate)
-        
-        // Test initialization with a nil expiration date
-        let itemWithoutExpiration = Item(name: "Canned Beans", expirationDate: nil)
-        XCTAssertNotNil(itemWithoutExpiration)
-        XCTAssertEqual(itemWithoutExpiration.name, "Canned Beans")
-        XCTAssertNil(itemWithoutExpiration.expirationDate)
     }
     
     func testDaysUntilExpiration() {
