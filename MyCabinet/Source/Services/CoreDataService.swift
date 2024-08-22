@@ -5,6 +5,8 @@ class CoreDataService: ObservableObject {
     
     static let shared = CoreDataService()
     
+    let container: NSPersistentContainer
+    
     private init() {} // Singleton
     
     lazy var persistentContainer: NSPersistentContainer = {
