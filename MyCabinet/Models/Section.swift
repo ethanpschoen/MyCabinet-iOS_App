@@ -1,19 +1,28 @@
 import Foundation
+import CoreData
 
-// MARK: - Section Model
+@objc(Section)
+public class Section: NSManagedObject {
 
-class Section: Identifiable, Codable {
+}
+
+extension Section {
+    
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Section> {
+        return NSFetchRequest<Section>(entityName: "Section")
+    }
+
     // Unique identifier for each section
-    var id: UUID
+    @NSManaged public var id: UUID
     
     // The title of the section
-    var title: String
+    @NSManaged public var title: String
     
     // Array of items in this section
-    var items: [Item]
+    @NSManaged public var items: NSSet
     
     // Name of icon for section
-    var iconName: String
+    @NSManaged public var iconName: String?
     
     // Computed property to get the count of items in the section
     var itemCount: Int {
@@ -26,24 +35,35 @@ class Section: Identifiable, Codable {
     }
     
     // Initializer
-    init(title: String, items: [Item] = [], iconName: String) {
-        self.id = UUID()
-        self.title = title
-        self.items = items
-        self.iconName = iconName
-    }
-    
-    // Method to add a new item to the section
-    func addItem(_ item: Item) {
-        items.append(item)
-    }
-    
-    // Method to remove an item from the section
-    func removeItem(_ item: Item) {
-        items.removeAll { $0.id == item.id }
-    }
+    //init(title: String, items: [Item] = [], iconName: String) {
+        //self.id = UUID()
+        //self.title = title
+        //self.items = items
+        //self.iconName = iconName
+    //}
     
     func findItem(byID id: UUID) -> Item? {
         return items.first { $0.id == id }
     }
+}
+
+// MARK: Generated accessors for items
+extension Section {
+
+    @objc(addItemsObject:)
+    @NSManaged public func addToItems(_ value: Item)
+
+    @objc(removeItemsObject:)
+    @NSManaged public func removeFromItems(_ value: Item)
+
+    @objc(addItems:)
+    @NSManaged public func addToItems(_ values: NSSet)
+
+    @objc(removeItems:)
+    @NSManaged public func removeFromItems(_ values: NSSet)
+
+}
+
+extension Section : Identifiable {
+
 }

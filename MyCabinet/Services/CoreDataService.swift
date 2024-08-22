@@ -10,7 +10,6 @@ class CoreDataService: ObservableObject {
     private init() {} // Singleton
     
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "MyCabinet")
         container.loadPersistentStores { storeDescription, error in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
