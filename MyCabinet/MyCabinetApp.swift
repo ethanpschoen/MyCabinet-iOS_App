@@ -5,7 +5,8 @@ import UIKit
 @main
 struct MyCabinetApp: App {
     
-    let coreDataService = CoreDataService.shared
+    // Create an observable instance of the Core Data service.
+    @StateObject private var coreDataService = CoreDataService.shared
     
     // Register the AppDelegate
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
@@ -48,7 +49,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             }
         })
         return container
-    }
+    }()
     
     // MARK: - Core Data Saving support
     func saveContext() {

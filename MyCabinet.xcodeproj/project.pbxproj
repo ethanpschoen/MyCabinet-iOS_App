@@ -177,6 +177,8 @@
 		AA5C74072C6EC82E0014534C /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				AA5C73FD2C6EC79A0014534C /* ViewControllers */,
+				AA5C74002C6EC7B70014534C /* Views */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -205,8 +207,9 @@
 		AA8505772C6EC275002FB9F0 /* MyCabinet */ = {
 			isa = PBXGroup;
 			children = (
+				AA8505A32C6EC55E002FB9F0 /* Models */,
+				AA5C73FA2C6EC7740014534C /* Services */,
 				AA5C74072C6EC82E0014534C /* SwiftUI */,
-				AA8505A22C6EC553002FB9F0 /* Source */,
 				AA8505782C6EC275002FB9F0 /* MyCabinetApp.swift */,
 				AA85057A2C6EC275002FB9F0 /* ContentView.swift */,
 				AA85057C2C6EC276002FB9F0 /* Assets.xcassets */,
@@ -245,17 +248,6 @@
 				AA8505952C6EC276002FB9F0 /* MyCabinetUITestsLaunchTests.swift */,
 			);
 			path = MyCabinetUITests;
-			sourceTree = "<group>";
-		};
-		AA8505A22C6EC553002FB9F0 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				AA5C74002C6EC7B70014534C /* Views */,
-				AA5C73FD2C6EC79A0014534C /* ViewControllers */,
-				AA5C73FA2C6EC7740014534C /* Services */,
-				AA8505A32C6EC55E002FB9F0 /* Models */,
-			);
-			path = Source;
 			sourceTree = "<group>";
 		};
 		AA8505A32C6EC55E002FB9F0 /* Models */ = {
