@@ -20,7 +20,7 @@ struct ItemRowView: View {
 
 struct ItemRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemRowView(item: Item(name: "Milk", expirationDate: Date().addingTimeInterval(-86400)))
+        ItemRowView(item: Item())
             .previewLayout(.sizeThatFits)
     }
 }

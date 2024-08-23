@@ -5,7 +5,7 @@ class SectionDetailViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var tableView: UITableView!
     
     var section: Section!
-    var items: [Item] = []
+    var items: NSSet = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +25,37 @@ class SectionDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
-        cell.textLabel?.text = items[indexPath.row].name
+        
+        // Convert NSSet to an Array of Items and sort or handle it
+        if let itemArray = items.allObjects as? [Item] {
+            // Check if indexPath.row is within bounds
+            guard indexPath.row >= 0 && indexPath.row < itemArray.count else {
+                print("Index out of bounds")
+                return cell
+            }
+            
+            // Safely access the item and set the cell's text label
+            let item = itemArray[indexPath.row]
+            cell.textLabel?.text = item.name
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Handle selection and navigate to ItemFormViewController for editing
-        let selectedItem = items[indexPath.row]
-        let formVC = ItemFormViewController()
-        formVC.item = selectedItem
-        navigationController?.pushViewController(formVC, animated: true)
+        // Convert NSSet to Array of Items
+        if let itemArray = items.allObjects as? [Item] {
+            // Check if indexPath.row is within bounds
+            guard indexPath.row >= 0 && indexPath.row < itemArray.count else {
+                print("Index out of bounds")
+                return
+            }
+            
+            // Safely access the selected item and navigate to ItemFormViewController
+            let selectedItem = itemArray[indexPath.row]
+            let formVC = ItemFormViewController()
+            formVC.item = selectedItem
+            navigationController?.pushViewController(formVC, animated: true)
+        }
     }
 }

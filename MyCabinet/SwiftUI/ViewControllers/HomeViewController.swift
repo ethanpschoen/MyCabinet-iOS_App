@@ -17,10 +17,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func loadSections() -> [Section] {
         // Placeholder function for loading sections
         // Replace with actual data loading logic
-        return [
-            Section(title: "Dairy", iconName: "Dairy"),
-            Section(title: "Product", iconName: "Product")
-        ]
+        return []
     }
     
     // MARK: - TableView Data Source Methods

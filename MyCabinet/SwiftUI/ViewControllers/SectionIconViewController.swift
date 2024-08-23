@@ -25,9 +25,6 @@ class SectionIconViewController: UIViewController {
     
     func loadSections() -> [Section] {
         // Replace with your actual data loading logic
-        return [
-            Section(title: "Dairy", iconName: "dairyIcon"),
-            Section(title: "Dairy", iconName: "produceIcon")
-        ]
+        return []
     }
 }

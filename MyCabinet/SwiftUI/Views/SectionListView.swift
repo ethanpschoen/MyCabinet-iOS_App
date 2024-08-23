@@ -20,16 +20,16 @@ struct SectionListView: View {
 struct SectionListView_Previews: PreviewProvider {
     static var previews: some View {
         let items1 = [
-            Item(name: "Milk", expirationDate: Date().addingTimeInterval(-86400)),
-            Item(name: "Cheese", expirationDate: Date().addingTimeInterval(86400 * 5))
+            Item(),
+            Item()
         ]
         let items2 = [
-            Item(name: "Chicken", expirationDate: Date().addingTimeInterval(86400 * 2)),
-            Item(name: "Beef", expirationDate: Date().addingTimeInterval(86400 * 7))
+            Item(),
+            Item()
         ]
         let sections = [
-            Section(title: "Dairy", items: items1, iconName: "Dairy"),
-            Section(title: "Meat", items: items2, iconName: "Meat")
+            Section(),
+            Section()
         ]
         
         SectionListView(sections: sections)

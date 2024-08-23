@@ -22,7 +22,7 @@ extension Section {
     @NSManaged public var items: NSSet
     
     // Name of icon for section
-    @NSManaged public var iconName: String?
+    @NSManaged public var iconName: String
     
     // Computed property to get the count of items in the section
     var itemCount: Int {

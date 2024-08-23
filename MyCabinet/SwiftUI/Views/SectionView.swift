@@ -5,7 +5,7 @@ struct SectionView: View {
 
     var body: some View {
         List {
-            ForEach(section.items) { item in
+            ForEach(Array(section.items as? Set<Item> ?? [])) { item in
                 ItemRowView(item: item)
             }
         }
@@ -16,10 +16,10 @@ struct SectionView: View {
 struct SectionView_Previews: PreviewProvider {
     static var previews: some View {
         let items = [
-            Item(name: "Milk", expirationDate: Date().addingTimeInterval(-86400)),
-            Item(name: "Cheese", expirationDate: Date().addingTimeInterval(86400 * 5))
+            Item(),
+            Item()
         ]
-        let section = Section(title: "Dairy", items: items, iconName: "Dairy")
+        let section = Section()
         
         SectionView(section: section)
     }

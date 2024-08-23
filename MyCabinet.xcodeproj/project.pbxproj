@@ -24,7 +24,6 @@
 		AA81F5E52C6FEACF003CFB4A /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA81F5E42C6FEACF003CFB4A /* ItemDetailViewController.swift */; };
 		AA81F5E72C6FEEBA003CFB4A /* ExpirationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA81F5E62C6FEEBA003CFB4A /* ExpirationService.swift */; };
 		AA81F5E92C6FF1C6003CFB4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA81F5E82C6FF1C6003CFB4A /* LaunchScreen.storyboard */; };
-		AA81F5EB2C6FF4DC003CFB4A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA81F5EA2C6FF4DC003CFB4A /* Info.plist */; };
 		AA81F5ED2C6FF590003CFB4A /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA81F5EC2C6FF590003CFB4A /* ItemTests.swift */; };
 		AA81F5EF2C6FF81D003CFB4A /* SectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA81F5EE2C6FF81D003CFB4A /* SectionTests.swift */; };
 		AA81F5F12C6FF952003CFB4A /* NotificationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA81F5F02C6FF952003CFB4A /* NotificationServiceTests.swift */; };
@@ -75,7 +74,6 @@
 		AA81F5E42C6FEACF003CFB4A /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		AA81F5E62C6FEEBA003CFB4A /* ExpirationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirationService.swift; sourceTree = "<group>"; };
 		AA81F5E82C6FF1C6003CFB4A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AA81F5EA2C6FF4DC003CFB4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA81F5EC2C6FF590003CFB4A /* ItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
 		AA81F5EE2C6FF81D003CFB4A /* SectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTests.swift; sourceTree = "<group>"; };
 		AA81F5F02C6FF952003CFB4A /* NotificationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationServiceTests.swift; sourceTree = "<group>"; };
@@ -215,7 +213,6 @@
 				AA85057C2C6EC276002FB9F0 /* Assets.xcassets */,
 				AA85057E2C6EC276002FB9F0 /* Preview Content */,
 				AA81F5E82C6FF1C6003CFB4A /* LaunchScreen.storyboard */,
-				AA81F5EA2C6FF4DC003CFB4A /* Info.plist */,
 				AA3E491C2C74043000FDA82E /* MyCabinet.xcdatamodeld */,
 			);
 			path = MyCabinet;
@@ -363,7 +360,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA81F5EB2C6FF4DC003CFB4A /* Info.plist in Resources */,
 				AA81F5E92C6FF1C6003CFB4A /* LaunchScreen.storyboard in Resources */,
 				AA8505802C6EC276002FB9F0 /* Preview Assets.xcassets in Resources */,
 				AA85057D2C6EC276002FB9F0 /* Assets.xcassets in Resources */,
