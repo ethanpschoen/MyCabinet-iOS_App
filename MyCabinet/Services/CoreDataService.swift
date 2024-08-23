@@ -7,19 +7,19 @@ class CoreDataService: ObservableObject {
     
     let container: NSPersistentContainer
     
-    private init() {} // Singleton
-    
-    lazy var persistentContainer: NSPersistentContainer = {
+    private init() {
+        // Initialize the NSPersistentContainer
+        container = NSPersistentContainer(name: "MyCabinet")
+        
         container.loadPersistentStores { storeDescription, error in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         }
-        return container
-    }()
+    }
     
     var context: NSManagedObjectContext {
-        return persistentContainer.viewContext
+        return container.viewContext
     }
     
     // MARK: - Core Data Saving support
@@ -37,10 +37,10 @@ class CoreDataService: ObservableObject {
     // MARK: - CRUD Operations
     
     // Create
-    func createSection(title: String, items: [Item], iconName: String) -> Section {
+    func createSection(title: String, items: NSSet, iconName: String) -> Section {
         let section = Section(context: context)
         section.title = title
-        section.items = NSSet(array: items)
+        section.items = items
         section.iconName = iconName
         saveContext()
         return section
@@ -58,12 +58,12 @@ class CoreDataService: ObservableObject {
     }
     
     // Update
-    func updateSection(section: Section, newTitle: String?, newItems: [Item]?, newIconName: String?) {
+    func updateSection(section: Section, newTitle: String?, newItems: NSSet?, newIconName: String?) {
         if let newTitle = newTitle {
             section.title = newTitle
         }
         if let newItems = newItems {
-            section.items = NSSet(array: newItems)
+            section.items = newItems
         }
         if let newIconName = newIconName {
             section.iconName = newIconName
@@ -77,9 +77,8 @@ class CoreDataService: ObservableObject {
         saveContext()
     }
     
-    func fetchItems(for section: Section) -> [Item] {
-        // Implement Core Data fetch logic
-        return []
+    func fetchItems(for section: Section) -> NSSet {
+        return section.items
     }
     
     // Add more methods for adding, deleting, and updating data

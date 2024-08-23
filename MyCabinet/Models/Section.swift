@@ -30,8 +30,11 @@ extension Section {
     }
     
     // Computed property to get the items that are expired
-    var expiredItems: [Item] {
-        return items.filter { $0.isExpired }
+    var expiredItems: NSSet {
+        // Convert NSSet to an Array to filter out (remove) all Items with isExpired == false
+        let filteredArray = items.allObjects.filter { ($0 as? Item)?.isExpired ?? false }
+        // Convert filtered array back to NSSet
+        return NSSet(array: filteredArray)
     }
     
     // Initializer
@@ -42,8 +45,11 @@ extension Section {
         //self.iconName = iconName
     //}
     
-    func findItem(byID id: UUID) -> Item? {
-        return items.first { $0.id == id }
+    func findItem(byID name: String) -> Item? {
+        // Convert NSSet to array for easier processing
+        let array = items.allObjects as? [Item]
+        // Search for item with matching ID
+        return array?.first { $0.name == name }
     }
 }
 
