@@ -13,14 +13,14 @@ struct SectionView: View {
     }
 }
 
-struct SectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        let items = [
-            Item(),
-            Item()
-        ]
-        let section = Section()
+//struct SectionView_Previews: PreviewProvider {
+    //static var previews: some View {
+        //let items = [
+            //Item(),
+            //Item()
+        //]
+        //let section = Section()
         
-        SectionView(section: section)
-    }
-}
+        //SectionView(section: section)
+    //}
+//}

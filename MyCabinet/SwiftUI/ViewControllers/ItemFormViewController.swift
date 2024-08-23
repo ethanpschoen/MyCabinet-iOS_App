@@ -23,7 +23,7 @@ class ItemFormViewController: UIViewController {
             item.expirationDate = expirationDatePicker.date
         } else {
             // Create new item
-            let newItem = Item()
+            //let newItem = Item()
             // Save the item (e.q., to Core Data or your persistence service)
         }
         

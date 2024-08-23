@@ -20,8 +20,8 @@ struct MyCabinetApp: App {
             // Inject the persistent container's managed object context into the environment
                 .environment(\.managedObjectContext, coreDataService.context)
         }
-        .onChange(of: scenePhase) { newScenePhase in
-            switch newScenePhase {
+        .onChange(of: scenePhase) {
+            switch scenePhase {
             case .active:
                 // App became active
                 break
@@ -31,9 +31,9 @@ struct MyCabinetApp: App {
             case .background:
                 // App went to the background, save context here
                 coreDataService.saveContext()
-            default:
+            @unknown default:
                 break
-            }
+        }
     }
 }
 

@@ -28,8 +28,8 @@ class ExpirationService {
     // MARK: - Check and Notify for Upcoming Expirations
     
     func checkForUpcomingExpirations(items: [Item], within days: Int) -> [Item] {
-        let currentDate = Date()
-        let calendar = Calendar.current
+        //let currentDate = Date()
+        //let calendar = Calendar.current
         var expiringItems = [Item]()
         
         for item in items {
