@@ -9,32 +9,61 @@ struct ContentView: View {
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Section.title, ascending: true)], animation: .default)
     private var sections: FetchedResults<Section>
     
+    @State private var isListView: Double = 0
+    @State private var showSettings: Bool = false
+    @State private var showAddSectionView: Bool = false
+    
     var body: some View {
         NavigationView {
-            List {
-                ForEach(sections) { section in
-                    SwiftUI.Section(header: Text(section.title)) {
-                        ForEach(section.items.allObjects as? [Item] ?? [], id: \.self) { item in
-                            VStack(alignment: .leading) {
-                                Text(item.name).font(.headline)
-                                Text("Expires on \(formattedDate(item.expirationDate))").font(.subheadline)
-                            }
-                            .padding()
-                        }
-                    }
+            VStack {
+                // Slider to switch between list and icon view
+                HStack {
+                    Text("List View")
+                    Slider(value: $isListView, in: 0...1, step: 1)
+                        .frame(width: 150)
+                    Text("Icon View")
+                }
+                .padding()
+                
+                // Conditional rendering based on slider value
+                if isListView == 0 {
+                    SectionListView(sections: sections)
+                } else {
+                    SectionIconView(sections: sections)
+                }
+                
+                // Button to add a new section
+                Button(action: {
+                    showAddSectionView.toggle()
+                }) {
+                    Text("Add Section")
+                        .font(.headline)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding()
+                .sheet(isPresented: $showAddSectionView) {
+                    AddSectionView()
+                        .environment(\.managedObjectContext, viewContext)
+                }
+                
+                // Settings Button
+                Button(action: {
+                    showSettings.toggle()
+                }) {
+                    Image(systemName: "gearshape")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .padding()
+                }
+                .sheet(isPresented: $showSettings) {
+                    SettingsView()
                 }
             }
         }
-        .navigationTitle("Sections")
-    }
-    
-    // Format the date as a readable string
-    private func formattedDate(_ date: Date?) -> String {
-        guard let date = date else { return "No Expiration Date" }
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        return formatter.string(from: date)
+        .navigationTitle("My Cabinet")
     }
 }
 

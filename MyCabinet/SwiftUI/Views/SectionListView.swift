@@ -1,18 +1,18 @@
 import SwiftUI
 
 struct SectionListView: View {
-    @State var sections: [Section]
+    @State var sections: FetchedResults<Section>
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(sections) { section in
-                    NavigationLink(destination: SectionView(section: section)) {
-                        Text(section.title)
+        List {
+            ForEach(sections) { section in
+                SwiftUI.Section(header: Text(section.title)) {
+                    ForEach(section.items.allObjects as? [Item] ?? [], id: \.self) { item in
+                        Text(item.name)
                     }
                 }
             }
-            .navigationTitle("Sections")
+        .navigationTitle("Sections")
         }
     }
 }

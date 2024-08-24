@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA02ABE62C79BB8600981F53 /* AddSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA02ABE52C79BB8600981F53 /* AddSectionView.swift */; };
+		AA02ABE82C79BBA100981F53 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA02ABE72C79BBA100981F53 /* SettingsView.swift */; };
 		AA3E49132C73F5DB00FDA82E /* SectionIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E49122C73F5DB00FDA82E /* SectionIconView.swift */; };
 		AA3E49152C73FB1800FDA82E /* SectionIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E49142C73FB1800FDA82E /* SectionIconViewController.swift */; };
 		AA3E49182C73FC6800FDA82E /* SectionIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E49172C73FC6800FDA82E /* SectionIconCell.swift */; };
@@ -58,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA02ABE52C79BB8600981F53 /* AddSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSectionView.swift; sourceTree = "<group>"; };
+		AA02ABE72C79BBA100981F53 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AA3E49122C73F5DB00FDA82E /* SectionIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionIconView.swift; sourceTree = "<group>"; };
 		AA3E49142C73FB1800FDA82E /* SectionIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionIconViewController.swift; sourceTree = "<group>"; };
 		AA3E49172C73FC6800FDA82E /* SectionIconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionIconCell.swift; sourceTree = "<group>"; };
@@ -152,9 +156,9 @@
 				AA81F5E02C6FE961003CFB4A /* ItemRowViewController.swift */,
 				AA81F5E42C6FEACF003CFB4A /* ItemDetailViewController.swift */,
 				AA9B4E022C71421E000B772D /* HomeViewController.swift */,
-				AA9B4E042C714407000B772D /* SectionDetailViewController.swift */,
 				AA9B4E062C715398000B772D /* ItemFormViewController.swift */,
 				AA4D456C2C715D3F00EC700A /* SettingsViewController.swift */,
+				AA9B4E042C714407000B772D /* SectionDetailViewController.swift */,
 				AA3E49142C73FB1800FDA82E /* SectionIconViewController.swift */,
 			);
 			path = ViewControllers;
@@ -168,6 +172,8 @@
 				AA5C74032C6EC7F10014534C /* SectionListView.swift */,
 				AA5C74052C6EC80C0014534C /* SectionView.swift */,
 				AA3E49122C73F5DB00FDA82E /* SectionIconView.swift */,
+				AA02ABE52C79BB8600981F53 /* AddSectionView.swift */,
+				AA02ABE72C79BBA100981F53 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -406,7 +412,9 @@
 				AA81F5E72C6FEEBA003CFB4A /* ExpirationService.swift in Sources */,
 				AA8505792C6EC275002FB9F0 /* MyCabinetApp.swift in Sources */,
 				AA3E491E2C74043000FDA82E /* MyCabinet.xcdatamodeld in Sources */,
+				AA02ABE62C79BB8600981F53 /* AddSectionView.swift in Sources */,
 				AA9B4E032C71421E000B772D /* HomeViewController.swift in Sources */,
+				AA02ABE82C79BBA100981F53 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
